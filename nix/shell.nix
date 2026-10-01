@@ -1,10 +1,11 @@
 {
   mkShell,
-  jdk8
+  jdk8,
+  oldPkgs
 }:
 
 mkShell {
-  packages = [ jdk8 ];
+  packages = [ jdk8 oldPkgs.gradle ];
   env = {
     JAVA_HOME = jdk8.home;
   };
